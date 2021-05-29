@@ -1,5 +1,7 @@
 /*eslint-disable*/
 import React from "react";
+import Link from "next/link";
+
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
@@ -33,53 +35,25 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/?ref=njsmk-footer"
+                href="mailto:eduardo.nunez@samrofer.com"
                 className={classes.block}
                 target="_blank"
               >
-                Creative Tim
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/presentation?ref=njsmk-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                About us
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://blog.creative-tim.com/?ref=njsmk-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Blog
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/license?ref=njsmk-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Licenses
+                Contactanos
               </a>
             </ListItem>
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=njsmk-footer"
+          &copy; 2021, made with <Favorite className={classes.icon} /> by{" "}
+          <Link
+            href="https://mnunezdm.com"
             className={aClasses}
             target="_blank"
+            rel="noopener"
           >
-            Creative Tim
-          </a>{" "}
-          for a better web.
+            mnunezdm
+          </Link>
         </div>
       </div>
     </footer>
