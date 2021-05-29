@@ -227,6 +227,11 @@ const cardSubtitle = {
   marginTop: "-.375rem",
 };
 
+const paddingVerticalSmall = {
+  paddingTop: "1rem",
+  paddingBottom: "1rem",
+};
+
 export {
   hexToRGBAlpha,
   //variables
@@ -263,4 +268,5 @@ export {
   cardTitle,
   cardLink,
   cardSubtitle,
+  paddingVerticalSmall,
 };
