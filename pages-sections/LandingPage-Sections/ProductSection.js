@@ -1,15 +1,20 @@
 import React from "react";
+import Router from "next/router";
+
+import classNames from "classnames";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
 import { LocalOffer, SquareFoot, Gavel } from "@material-ui/icons";
 // core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import InfoArea from "components/InfoArea/InfoArea.js";
+import GridContainer from "../../components/Grid/GridContainer.js";
+import GridItem from "../../components/Grid/GridItem.js";
+import InfoArea from "../../components/InfoArea/InfoArea.js";
+import Button from "../../components/CustomButtons/Button.js";
 
-import styles from "styles/jss/nextjs-material-kit/pages/landingPageSections/productStyle.js";
+import styles from "../../styles/jss/nextjs-material-kit/pages/landingPageSections/productStyle.js";
 
 const useStyles = makeStyles(styles);
 
@@ -55,6 +60,18 @@ export default function ProductSection() {
             />
           </GridItem>
         </GridContainer>
+      </div>
+      <div>
+        <Button
+          href="obras"
+          className={classNames(classes.navLink, classes.marginVerticalSmall)}
+          onClick={(e) => {
+            e.preventDefault();
+            Router.push("/presupuesto");
+          }}
+        >
+          !Solicitar Presupuesto!
+        </Button>
       </div>
     </div>
   );

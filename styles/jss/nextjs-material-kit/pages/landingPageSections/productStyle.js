@@ -1,6 +1,7 @@
-import { title } from "styles/jss/nextjs-material-kit.js";
+import { title, marginVerticalSmall } from "../../../nextjs-material-kit.js";
 
 const productStyle = {
+  marginVerticalSmall,
   section: {
     padding: "70px 0",
     textAlign: "center",
