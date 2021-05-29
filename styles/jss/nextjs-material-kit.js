@@ -232,8 +232,7 @@ const marginVerticalSmall = {
   marginBottom: "1rem",
 };
 
-const paddingVerticalLarge = {
-  paddingTop: "3rem",
+const paddingBottomlLarge = {
   paddingBottom: "3rem",
 };
 
@@ -273,6 +272,6 @@ export {
   cardTitle,
   cardLink,
   cardSubtitle,
-  paddingVerticalLarge,
+  paddingBottomlLarge,
   marginVerticalSmall,
 };

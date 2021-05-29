@@ -1,13 +1,15 @@
 import {
   container,
   title,
-  paddingVerticalSmall,
+  paddingBottomlLarge,
+  marginVerticalSmall,
 } from "styles/jss/nextjs-material-kit.js";
 
 import imagesStyle from "styles/jss/nextjs-material-kit/imagesStyles.js";
 
 const profilePageStyle = {
-  paddingVerticalSmall,
+  paddingBottomlLarge,
+  marginVerticalSmall,
   container,
   profile: {
     textAlign: "center",

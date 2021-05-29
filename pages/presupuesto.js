@@ -53,12 +53,19 @@ export default function ProfilePage(props) {
           <div
             className={classNames(
               classes.container,
-              classes.paddingVerticalSmall
+              classes.paddingBottomlLarge
             )}
           >
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={6}>
-                <h3>Danos detalles...</h3>
+                <h2
+                  className={classNames(
+                    classes.title,
+                    classes.marginVerticalSmall
+                  )}
+                >
+                  Cuentanos un poco más...
+                </h2>
                 <CustomInput
                   labelText="Nombre"
                   id="first"
@@ -152,7 +159,7 @@ export default function ProfilePage(props) {
                   inputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
-                        <Build className={classes.inputIconsColor} />
+                        <DateRange className={classes.inputIconsColor} />
                       </InputAdornment>
                     ),
                   }}
@@ -172,10 +179,12 @@ export default function ProfilePage(props) {
                     ),
                   }}
                 />
-                <Button fullWidth={true}>
-                  <Send className={classes.inputIconsColor} />
-                  Enviar
-                </Button>
+                <div className={classes.marginVerticalSmall}>
+                  <Button fullWidth={true}>
+                    <Send className={classes.inputIconsColor} />
+                    Enviar
+                  </Button>
+                </div>
               </GridItem>
             </GridContainer>
           </div>
