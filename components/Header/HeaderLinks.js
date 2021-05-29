@@ -62,6 +62,7 @@ export default function HeaderLinks(props) {
             className={classes.navLink}
           >
             <i className={classes.socialIcons + " fab fa-instagram"} />
+            @samrofer
           </Button>
         </Tooltip>
       </ListItem>
