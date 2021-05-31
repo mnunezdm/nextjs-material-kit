@@ -6,6 +6,7 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import FormControl from "@material-ui/core/FormControl";
+import FormHelperText from "@material-ui/core/FormHelperText";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 
@@ -25,6 +26,7 @@ export default function CustomInput(props) {
     white,
     inputRootCustomClasses,
     success,
+    helpText,
   } = props;
 
   const labelClasses = classNames({
@@ -74,6 +76,7 @@ export default function CustomInput(props) {
         id={id}
         {...inputProps}
       />
+      {helpText && <FormHelperText>{helpText}</FormHelperText>}
     </FormControl>
   );
 }
