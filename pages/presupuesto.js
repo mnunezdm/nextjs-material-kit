@@ -34,6 +34,21 @@ const useStyles = makeStyles(styles);
 export default function ProfilePage(props) {
   const classes = useStyles();
   const { ...rest } = props;
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    console.log(state);
+  };
+
+  const [state, setState] = React.useState({});
+
+  const handleChange = (event) => {
+    setState({
+      ...state,
+      [event.currentTarget.name]: event.currentTarget.value,
+    });
+  };
+
   return (
     <div>
       <Header
@@ -49,7 +64,7 @@ export default function ProfilePage(props) {
       />
       <Parallax small filter image="/img/profile-bg.jpg" />
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div>
+        <form autoComplete="on" onSubmit={onSubmit}>
           <div
             className={classNames(
               classes.container,
@@ -71,9 +86,14 @@ export default function ProfilePage(props) {
                   id="first"
                   formControlProps={{
                     fullWidth: true,
+                    required: true,
                   }}
                   inputProps={{
+                    onChange: handleChange,
                     type: "text",
+                    name: "name",
+                    autoComplete: "name",
+                    required: true,
                     endAdornment: (
                       <InputAdornment position="end">
                         <People className={classes.inputIconsColor} />
@@ -86,9 +106,14 @@ export default function ProfilePage(props) {
                   id="email"
                   formControlProps={{
                     fullWidth: true,
+                    required: true,
                   }}
                   inputProps={{
+                    onChange: handleChange,
                     type: "email",
+                    name: "email",
+                    autoComplete: "email",
+                    required: true,
                     endAdornment: (
                       <InputAdornment position="end">
                         <Email className={classes.inputIconsColor} />
@@ -101,9 +126,14 @@ export default function ProfilePage(props) {
                   id="phone"
                   formControlProps={{
                     fullWidth: true,
+                    required: true,
                   }}
                   inputProps={{
+                    onChange: handleChange,
                     type: "tel",
+                    name: "tel",
+                    autoComplete: "tel",
+                    required: true,
                     endAdornment: (
                       <InputAdornment position="end">
                         <Phone className={classes.inputIconsColor} />
@@ -116,9 +146,14 @@ export default function ProfilePage(props) {
                   id="address"
                   formControlProps={{
                     fullWidth: true,
+                    required: true,
                   }}
+                  helpText="¡No necesitamos la dirección exacta!"
                   inputProps={{
+                    onChange: handleChange,
                     type: "text",
+                    name: "address",
+                    required: true,
                     endAdornment: (
                       <InputAdornment position="end">
                         <Home className={classes.inputIconsColor} />
@@ -131,6 +166,7 @@ export default function ProfilePage(props) {
                   id="type"
                   formControlProps={{
                     fullWidth: true,
+                    required: true,
                   }}
                   selectValues={[
                     { value: "full", label: "Reforma Integral" },
@@ -138,6 +174,9 @@ export default function ProfilePage(props) {
                     { value: "later", label: "En mas de un mes" },
                   ]}
                   inputProps={{
+                    onChange: handleChange,
+                    required: true,
+                    name: "type",
                     endAdornment: (
                       <InputAdornment position="end">
                         <Build className={classes.inputIconsColor} />
@@ -150,6 +189,7 @@ export default function ProfilePage(props) {
                   id="type"
                   formControlProps={{
                     fullWidth: true,
+                    required: true,
                   }}
                   selectValues={[
                     { value: "now", label: "Cuanto Antes" },
@@ -157,6 +197,9 @@ export default function ProfilePage(props) {
                     { value: "later", label: "En mas de un mes" },
                   ]}
                   inputProps={{
+                    onChange: handleChange,
+                    required: true,
+                    name: "date",
                     endAdornment: (
                       <InputAdornment position="end">
                         <DateRange className={classes.inputIconsColor} />
@@ -169,9 +212,14 @@ export default function ProfilePage(props) {
                   id="text"
                   formControlProps={{
                     fullWidth: true,
+                    required: true,
                   }}
                   inputProps={{
+                    onChange: handleChange,
                     type: "text",
+                    required: true,
+                    name: "comments",
+                    multiline: true,
                     endAdornment: (
                       <InputAdornment position="end">
                         <Home className={classes.inputIconsColor} />
@@ -180,7 +228,7 @@ export default function ProfilePage(props) {
                   }}
                 />
                 <div className={classes.marginVerticalSmall}>
-                  <Button fullWidth={true}>
+                  <Button fullWidth={true} type="submit">
                     <Send className={classes.inputIconsColor} />
                     Enviar
                   </Button>
@@ -188,7 +236,7 @@ export default function ProfilePage(props) {
               </GridItem>
             </GridContainer>
           </div>
-        </div>
+        </form>
       </div>
       <Footer />
     </div>
