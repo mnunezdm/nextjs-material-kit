@@ -62,7 +62,7 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image="/img/profile-bg.jpg" />
+      <Parallax small filter image="/img/landing/v-2.jpg" />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <form autoComplete="on" onSubmit={onSubmit}>
           <div
