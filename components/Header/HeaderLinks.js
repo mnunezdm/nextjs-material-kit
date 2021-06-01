@@ -2,11 +2,12 @@
 import React from "react";
 import Router from "next/router";
 
+import classNames from "classnames";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
 import { LocalOffer, History } from "@material-ui/icons";
@@ -18,7 +19,30 @@ import styles from "styles/jss/nextjs-material-kit/components/headerLinksStyle.j
 
 const useStyles = makeStyles(styles);
 
-export default function HeaderLinks(props) {
+export function InstagramLink(props) {
+  const { showAt, buttonClass } = props;
+  const classes = useStyles();
+
+  return (
+    <Button
+      color="transparent"
+      href="https://www.instagram.com/samrofer"
+      target="_blank"
+      className={buttonClass}
+    >
+      <i
+        className={classNames(
+          classes.socialIcons,
+          classes.navLinkIcon,
+          "fab fa-instagram"
+        )}
+      />
+      {showAt && <span className={classes.navLinkText}>@samrofer</span>}
+    </Button>
+  );
+}
+
+export default function HeaderLinks() {
   const classes = useStyles();
   return (
     <List className={classes.list}>
@@ -49,22 +73,23 @@ export default function HeaderLinks(props) {
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-tooltip"
-          title="Follow us on instagram"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
+        <InstagramLink showAt={true} buttonClass={classes.navLink} />
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          color="transparent"
+          href="https://wa.me/34600000000"
+          target="_blank"
+          className={classes.navLink}
         >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/samrofer"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-instagram"} />
-            @samrofer
-          </Button>
-        </Tooltip>
+          <i
+            className={classNames(
+              classes.socialIcons,
+              classes.navLinkIcon,
+              "fab fa-whatsapp"
+            )}
+          />
+        </Button>
       </ListItem>
     </List>
   );
