@@ -23,8 +23,7 @@ export default function CustomSelect(props) {
     labelProps,
     inputProps,
     error,
-    white,
-    inputRootCustomClasses,
+    customOnChange,
     success,
     selectValues,
   } = props;
@@ -32,19 +31,6 @@ export default function CustomSelect(props) {
   const labelClasses = classNames({
     [" " + classes.labelRootError]: error,
     [" " + classes.labelRootSuccess]: success && !error,
-  });
-  const underlineClasses = classNames({
-    [classes.underlineError]: error,
-    [classes.underlineSuccess]: success && !error,
-    [classes.underline]: true,
-    [classes.whiteUnderline]: white,
-  });
-  const marginTop = classNames({
-    [inputRootCustomClasses]: inputRootCustomClasses !== undefined,
-  });
-  const inputClasses = classNames({
-    [classes.input]: true,
-    [classes.whiteInput]: white,
   });
   var formControlClasses;
   if (formControlProps !== undefined) {
@@ -56,8 +42,9 @@ export default function CustomSelect(props) {
     formControlClasses = classes.formControl;
   }
 
-  const onChange = (newValue) => {
-    setValue(newValue.target.value);
+  const onChange = (event) => {
+    setValue(event.target.value);
+    customOnChange && customOnChange(event);
   };
 
   return (
@@ -73,10 +60,10 @@ export default function CustomSelect(props) {
       ) : null}
       <Select
         classes={{
-          root: marginTop,
           disabled: classes.disabled,
         }}
         id={id}
+        className={classes.marginTopNone}
         value={value}
         {...inputProps}
         onChange={onChange}

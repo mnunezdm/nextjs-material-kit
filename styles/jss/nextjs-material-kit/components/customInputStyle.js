@@ -84,6 +84,9 @@ const customInputStyle = {
       opacity: "1",
     },
   },
+  marginTopNone: {
+    marginTop: "0 !important",
+  },
 };
 
 export default customInputStyle;
