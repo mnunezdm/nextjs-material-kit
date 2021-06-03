@@ -28,24 +28,26 @@ import Parallax from "../components/Parallax/Parallax.js";
 import CustomInput from "../components/CustomInput/CustomInput.js";
 import CustomSelect from "../components/CustomInput/CustomSelect.js";
 import styles from "styles/jss/nextjs-material-kit/pages/budgetPage.js";
+import { DATE, TYPES } from "../shared/constants/refurbishment.js";
+import { generateEmail } from "../shared/libs/budgetRequest.js";
 
 const useStyles = makeStyles(styles);
 
 export default function ProfilePage(props) {
   const classes = useStyles();
   const { ...rest } = props;
-  const onSubmit = (event) => {
-    event.preventDefault();
-
-    console.log(state);
-  };
 
   const [state, setState] = React.useState({});
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    open(`mailto:eduardo.nunez@samrofer.com?${generateEmail(state)}`);
+  };
 
   const handleChange = (event) => {
     setState({
       ...state,
-      [event.currentTarget.name]: event.currentTarget.value,
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -168,13 +170,12 @@ export default function ProfilePage(props) {
                     fullWidth: true,
                     required: true,
                   }}
-                  selectValues={[
-                    { value: "full", label: "Reforma Integral" },
-                    { value: "kitchen", label: "Cocina/Baños" },
-                    { value: "later", label: "En mas de un mes" },
-                  ]}
+                  selectValues={Object.keys(TYPES).map((type) => ({
+                    value: type,
+                    label: TYPES[type],
+                  }))}
+                  customOnChange={handleChange}
                   inputProps={{
-                    onChange: handleChange,
                     required: true,
                     name: "type",
                     endAdornment: (
@@ -191,13 +192,12 @@ export default function ProfilePage(props) {
                     fullWidth: true,
                     required: true,
                   }}
-                  selectValues={[
-                    { value: "now", label: "Cuanto Antes" },
-                    { value: "soon", label: "En un mes" },
-                    { value: "later", label: "En mas de un mes" },
-                  ]}
+                  selectValues={Object.keys(DATE).map((type) => ({
+                    value: type,
+                    label: DATE[type],
+                  }))}
+                  customOnChange={handleChange}
                   inputProps={{
-                    onChange: handleChange,
                     required: true,
                     name: "date",
                     endAdornment: (
