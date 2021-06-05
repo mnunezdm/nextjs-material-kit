@@ -1,7 +1,7 @@
 {
-  "name": "next-material-kit",
-  "version": "1.2.0",
-  "description": "NextJS Version of Material Kit React by Creative Tim (https://creative-tim.com)",
+  "name": "samrofer-home",
+  "version": "0.1.0",
+  "description": "Samrofer repository for public site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
