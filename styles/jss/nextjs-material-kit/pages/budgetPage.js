@@ -1,15 +1,24 @@
 import {
   container,
+  cardTitle,
   title,
+  paddingTopNone,
   paddingBottomlLarge,
   marginVerticalSmall,
-} from "styles/jss/nextjs-material-kit.js";
+} from "../../nextjs-material-kit.js";
 
 import imagesStyle from "styles/jss/nextjs-material-kit/imagesStyles.js";
 
-const profilePageStyle = {
+const budgetPageStyle = {
+  cardTitle,
   paddingBottomlLarge,
+  paddingTopNone,
   marginVerticalSmall,
+  parallax: {
+    "& + $container": {
+      marginTop: "-5rem",
+    },
+  },
   container,
   profile: {
     textAlign: "center",
@@ -66,4 +75,4 @@ const profilePageStyle = {
   },
 };
 
-export default profilePageStyle;
+export default budgetPageStyle;
