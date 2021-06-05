@@ -61,37 +61,30 @@ export default function WorksPage(props) {
         <div className={classes.container}>
           <Grid container>
             <Grid item xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Anteriores trabajos</h1>
+              <h1 className={classes.title}>Trabajos Anteriores</h1>
             </Grid>
           </Grid>
         </div>
       </Parallax>
-      <Grid
-        container
-        style={{ padding: 20, alignItems: "center" }}
-        direction="column"
-        spacing={4}
-      >
+      <section className={classes.container}>
         {works.map((work) => (
-          <Grid item xs={12} sm={12} md={10}>
-            <Card>
-              <CardHeader>
-                <h2 className={classNames(classes.cardTitle)}>{work.title}</h2>
-              </CardHeader>
-              <CardBody className={classes.paddingTopNone}>
-                <p>{work.description}</p>
-                {work.images && work.images.length ? (
-                  <div className={classes.imageContainer}>
-                    <ImageGallery items={work.images} />
-                  </div>
-                ) : (
-                  ""
-                )}
-              </CardBody>
-            </Card>
-          </Grid>
+          <Card key={work.id}>
+            <CardHeader>
+              <h2 className={classNames(classes.cardTitle)}>{work.title}</h2>
+            </CardHeader>
+            <CardBody className={classes.paddingTopNone}>
+              <p>{work.description}</p>
+              {work.images && work.images.length ? (
+                <div className={classes.imageContainer}>
+                  <ImageGallery items={work.images} />
+                </div>
+              ) : (
+                ""
+              )}
+            </CardBody>
+          </Card>
         ))}
-      </Grid>
+      </section>
       <Footer />
     </div>
   );

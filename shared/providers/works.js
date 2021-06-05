@@ -2,6 +2,7 @@ export default class WorkProvider {
   static getWorks() {
     return [
       {
+        id: "1",
         title: "Obra 1",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus doloribus eligendi odio libero, magni neque. Ut saepe voluptas est nostrum asperiores! Necessitatibus sunt, fuga dolorem eligendi amet cumque quia dolorum.",
@@ -21,12 +22,14 @@ export default class WorkProvider {
         ],
       },
       {
+        id: "2",
         title: "Obra 2",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus doloribus eligendi odio libero, magni neque. Ut saepe voluptas est nostrum asperiores! Necessitatibus sunt, fuga dolorem eligendi amet cumque quia dolorum.",
         images: [],
       },
       {
+        id: "3",
         title: "Obra 3",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus doloribus eligendi odio libero, magni neque. Ut saepe voluptas est nostrum asperiores! Necessitatibus sunt, fuga dolorem eligendi amet cumque quia dolorum.",

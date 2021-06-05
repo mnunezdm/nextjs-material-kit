@@ -20,7 +20,12 @@ const worksPageStyle = {
   marginBottomSmall,
   paddingTopNone,
   marginVerticalSmall,
-  container,
+  container: {
+    ...container,
+    "& > :not(:last-child)": {
+      marginBottom: 32,
+    },
+  },
   imageContainer: {
     minHeight: 300,
   },
@@ -55,11 +60,14 @@ const worksPageStyle = {
       "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
   },
   parallax: {
-    height: 300,
+    height: 400,
     "& $title": {
       zIndex: 1,
       color: "#FFFFFF",
       textDecoration: "none",
+    },
+    "& + $container": {
+      marginTop: "-3rem",
     },
   },
   title: {
