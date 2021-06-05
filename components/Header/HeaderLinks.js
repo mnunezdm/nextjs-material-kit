@@ -1,6 +1,6 @@
 /*eslint-disable*/
 import React from "react";
-import Router from "next/router";
+import Link from "next/link";
 
 import classNames from "classnames";
 
@@ -13,7 +13,7 @@ import ListItem from "@material-ui/core/ListItem";
 import { LocalOffer, History } from "@material-ui/icons";
 
 // core components
-import Button from "components/CustomButtons/Button.js";
+import Button from "../CustomButtons/Button.js";
 
 import styles from "styles/jss/nextjs-material-kit/components/headerLinksStyle.js";
 
@@ -47,30 +47,18 @@ export default function HeaderLinks() {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <Button
-          href="obras"
-          className={classes.navLink}
-          onClick={(e) => {
-            e.preventDefault();
-            Router.push("/obras");
-          }}
-          color="transparent"
-        >
-          <History className={classes.icons} /> Obras
-        </Button>
+        <Link href="/obras" passHref>
+          <Button className={classes.navLink} color="transparent">
+            <History className={classes.icons} /> Obras
+          </Button>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="presupuesto"
-          className={classes.navLink}
-          onClick={(e) => {
-            e.preventDefault();
-            Router.push("/presupuesto");
-          }}
-          color="transparent"
-        >
-          <LocalOffer className={classes.icons} /> Solicitar Presupuesto
-        </Button>
+        <Link href="/presupuesto" passHref>
+          <Button className={classes.navLink} color="transparent">
+            <LocalOffer className={classes.icons} /> Solicitar Presupuesto
+          </Button>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
         <InstagramLink showAt={true} buttonClass={classes.navLink} />
