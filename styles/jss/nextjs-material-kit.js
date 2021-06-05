@@ -227,13 +227,26 @@ const cardSubtitle = {
   marginTop: "-.375rem",
 };
 
+const marginBottomSmall = {
+  marginBottom: "1rem",
+};
+
 const marginVerticalSmall = {
   marginTop: "1rem",
   marginBottom: "1rem",
 };
 
+const paddingVerticalSmall = {
+  paddingTop: "1rem",
+  paddingBottom: "1rem",
+};
+
 const paddingBottomlLarge = {
   paddingBottom: "3rem",
+};
+
+const paddingTopLarge = {
+  paddingTop: "10rem",
 };
 
 export {
@@ -273,5 +286,8 @@ export {
   cardLink,
   cardSubtitle,
   paddingBottomlLarge,
+  marginBottomSmall,
+  paddingTopLarge,
+  paddingVerticalSmall,
   marginVerticalSmall,
 };

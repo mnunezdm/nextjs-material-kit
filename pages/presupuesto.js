@@ -33,7 +33,7 @@ import { generateEmail } from "../shared/libs/budgetRequest.js";
 
 const useStyles = makeStyles(styles);
 
-export default function ProfilePage(props) {
+export default function BudgetPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
 

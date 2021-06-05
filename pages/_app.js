@@ -21,7 +21,7 @@ import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
 
-import PageChange from "components/PageChange/PageChange.js";
+import PageChange from "../components/PageChange/PageChange.js";
 
 import "styles/scss/nextjs-material-kit.scss?v=1.2.0";
 
