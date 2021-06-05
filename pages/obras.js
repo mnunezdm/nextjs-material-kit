@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -19,32 +19,21 @@ import HeaderLinks from "../components/Header/HeaderLinks.js";
 
 import styles from "styles/jss/nextjs-material-kit/pages/worksPage.js";
 
+import WorkProvider from "../shared/providers/works.js";
+
 const useStyles = makeStyles(styles);
+
+import ImageGallery from "react-image-gallery";
 
 export default function WorksPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
 
-  const works = [
-    {
-      title: "Obra 1",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus doloribus eligendi odio libero, magni neque. Ut saepe voluptas est nostrum asperiores! Necessitatibus sunt, fuga dolorem eligendi amet cumque quia dolorum.",
-      images: [],
-    },
-    {
-      title: "Obra 2",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus doloribus eligendi odio libero, magni neque. Ut saepe voluptas est nostrum asperiores! Necessitatibus sunt, fuga dolorem eligendi amet cumque quia dolorum.",
-      images: [],
-    },
-    {
-      title: "Obra 3",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus doloribus eligendi odio libero, magni neque. Ut saepe voluptas est nostrum asperiores! Necessitatibus sunt, fuga dolorem eligendi amet cumque quia dolorum.",
-      images: [],
-    },
-  ];
+  const [works, setWorks] = useState([]);
+
+  useEffect(() => {
+    setWorks(WorkProvider.getWorks());
+  }, []);
 
   return (
     <div>
@@ -89,8 +78,15 @@ export default function WorksPage(props) {
               <CardHeader>
                 <h2 className={classNames(classes.cardTitle)}>{work.title}</h2>
               </CardHeader>
-              <CardBody>
+              <CardBody className={classes.paddingTopNone}>
                 <p>{work.description}</p>
+                {work.images && work.images.length ? (
+                  <div className={classes.imageContainer}>
+                    <ImageGallery items={work.images} />
+                  </div>
+                ) : (
+                  ""
+                )}
               </CardBody>
             </Card>
           </Grid>

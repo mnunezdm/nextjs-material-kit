@@ -5,6 +5,7 @@ import {
   marginVerticalSmall,
   marginBottomSmall,
   paddingTopLarge,
+  paddingTopNone,
   paddingVerticalSmall,
   cardTitle,
 } from "styles/jss/nextjs-material-kit.js";
@@ -17,8 +18,12 @@ const worksPageStyle = {
   paddingTopLarge,
   paddingVerticalSmall,
   marginBottomSmall,
+  paddingTopNone,
   marginVerticalSmall,
   container,
+  imageContainer: {
+    minHeight: 300,
+  },
   profile: {
     textAlign: "center",
     "& img": {

@@ -213,7 +213,7 @@ const title = {
 
 const cardTitle = {
   ...title,
-  marginTop: ".625rem",
+  margin: "0",
 };
 
 const cardLink = {
@@ -247,6 +247,10 @@ const paddingBottomlLarge = {
 
 const paddingTopLarge = {
   paddingTop: "10rem",
+};
+
+const paddingTopNone = {
+  paddingTop: 0,
 };
 
 export {
@@ -287,6 +291,7 @@ export {
   cardSubtitle,
   paddingBottomlLarge,
   marginBottomSmall,
+  paddingTopNone,
   paddingTopLarge,
   paddingVerticalSmall,
   marginVerticalSmall,
