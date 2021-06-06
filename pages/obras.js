@@ -76,7 +76,7 @@ export default function WorksPage(props) {
               <p>{work.description}</p>
               {work.images && work.images.length ? (
                 <div className={classes.imageContainer}>
-                  <ImageGallery items={work.images} />
+                  <ImageGallery items={work.images} lazyLoad={true} />
                 </div>
               ) : (
                 ""
