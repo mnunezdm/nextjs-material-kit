@@ -25,9 +25,10 @@ export default function ProductSection() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Contigo de principio a fin</h2>
-          <h5 className={classes.description}>
-            Te ayudamos a noseque y a nosecuantos
-          </h5>
+          <h3 className={classes.description}>
+            Sabemos lo importante que es una obra, por eso te ayudaremos a
+            conseguir el mejor resultado
+          </h3>
         </GridItem>
       </GridContainer>
       <div>
@@ -35,7 +36,7 @@ export default function ProductSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Diseño iterativo"
-              description=""
+              description="Te ayudaremos a encontrar el mejor resultado"
               icon={SquareFoot}
               iconColor="success"
               vertical
@@ -53,7 +54,7 @@ export default function ProductSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Obra"
-              description="Con la máxima, el último paso a tu obra terminada"
+              description="Con la máxima trasparencia, el último paso a tu obra terminada"
               icon={Gavel}
               iconColor="danger"
               vertical
@@ -64,13 +65,14 @@ export default function ProductSection() {
       <div>
         <Button
           href="obras"
+          color="primary"
           className={classNames(classes.navLink, classes.marginVerticalSmall)}
           onClick={(e) => {
             e.preventDefault();
             Router.push("/presupuesto");
           }}
         >
-          ¡Solicitar Presupuesto!
+          Solicitar Presupuesto
         </Button>
       </div>
     </div>

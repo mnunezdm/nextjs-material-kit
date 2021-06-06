@@ -2,15 +2,13 @@
 import React from "react";
 import Link from "next/link";
 
-import classNames from "classnames";
-
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
 // @material-ui/icons
-import { LocalOffer, History } from "@material-ui/icons";
+import { LocalOffer, History, WhatsApp, Instagram } from "@material-ui/icons";
 
 // core components
 import Button from "../CustomButtons/Button.js";
@@ -29,14 +27,10 @@ export function InstagramLink(props) {
       href="https://www.instagram.com/samrofer"
       target="_blank"
       className={buttonClass}
+      rel="noopener noreferrer"
+      aria-label="Instagram"
     >
-      <i
-        className={classNames(
-          classes.socialIcons,
-          classes.navLinkIcon,
-          "fab fa-instagram"
-        )}
-      />
+      <Instagram className={classes.icons} />
       {showAt && <span className={classes.navLinkText}>@samrofer</span>}
     </Button>
   );
@@ -69,14 +63,10 @@ export default function HeaderLinks() {
           href="https://wa.me/34600000000"
           target="_blank"
           className={classes.navLink}
+          rel="noopener noreferrer"
+          aria-label="Whatsapp"
         >
-          <i
-            className={classNames(
-              classes.socialIcons,
-              classes.navLinkIcon,
-              "fab fa-whatsapp"
-            )}
-          />
+          <WhatsApp className={classes.icons} />
         </Button>
       </ListItem>
     </List>

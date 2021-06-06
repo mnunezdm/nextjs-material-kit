@@ -61,7 +61,7 @@ export default function WorksPage(props) {
         <div className={classes.container}>
           <Grid container>
             <Grid item xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Trabajos Anteriores</h1>
+              <h2 className={classes.title}>Trabajos Anteriores</h2>
             </Grid>
           </Grid>
         </div>
@@ -70,7 +70,7 @@ export default function WorksPage(props) {
         {works.map((work) => (
           <Card key={work.id}>
             <CardHeader>
-              <h2 className={classNames(classes.cardTitle)}>{work.title}</h2>
+              <h3 className={classNames(classes.cardTitle)}>{work.title}</h3>
             </CardHeader>
             <CardBody className={classes.paddingTopNone}>
               <p>{work.description}</p>

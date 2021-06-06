@@ -9,12 +9,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 import { InstagramLink } from "./HeaderLinks";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
+
+import Button from "../CustomButtons/Button";
+
 // core components
 import styles from "styles/jss/nextjs-material-kit/components/headerStyle.js";
 
@@ -64,7 +66,9 @@ export default function Header(props) {
   });
   const brandComponent = (
     <Link href="/" as="/" passHref>
-      <Button className={classes.title}>{brand}</Button>
+      <Button color="transparent" style={{ textTransform: "inherit" }}>
+        <h1>{brand}</h1>
+      </Button>
     </Link>
   );
   return (

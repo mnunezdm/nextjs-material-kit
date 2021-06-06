@@ -27,7 +27,7 @@ export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
-    <div>
+    <>
       <Header
         color="transparent"
         routes={dashboardRoutes}
@@ -44,12 +44,11 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>¿Necesitas reformar tu casa?</h1>
-              <h4>
+              <h2 className={classes.title}>¿Necesitas reformar tu casa?</h2>
+              <h3>
                 Llevamos más de 25 años realizando todo tipo de reformas.
                 Contacta con nosotros
-              </h4>
-              <br />
+              </h3>
             </GridItem>
           </GridContainer>
         </div>
@@ -60,6 +59,6 @@ export default function LandingPage(props) {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }

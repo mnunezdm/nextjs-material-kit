@@ -32,7 +32,7 @@ const budgetPageStyle = {
   description: {
     margin: "1.071rem auto 0",
     maxWidth: "600px",
-    color: "#999",
+    color: "#666",
     textAlign: "center !important",
   },
   name: {
@@ -67,7 +67,7 @@ const budgetPageStyle = {
     height: "100%",
     lineHeight: "41px",
     fontSize: "20px",
-    color: "#999",
+    color: "#666",
   },
   navWrapper: {
     margin: "20px auto 50px auto",

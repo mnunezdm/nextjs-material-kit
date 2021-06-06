@@ -338,7 +338,7 @@ const buttonStyle = {
   link: {
     "&,&:hover,&:focus": {
       backgroundColor: "transparent",
-      color: "#999999",
+      color: "#666",
       boxShadow: "none",
     },
   },

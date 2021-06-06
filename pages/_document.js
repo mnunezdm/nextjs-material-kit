@@ -8,6 +8,11 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
+          <meta
+            key="description"
+            name="description"
+            content="Samrofer es una empresa de reformas en la Comunidad de Madrid. Con 25 años de experiencia te ayudara a conseguir los resultados esperados"
+          />
           <meta name="theme-color" content="#000000" />
           <link rel="shortcut icon" href="/img/favicon.png" />
           <link
@@ -19,11 +24,7 @@ class MyDocument extends Document {
           <link
             rel="stylesheet"
             type="text/css"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-          />
-          <link
-            href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons&display=swap"
           />
           <script
             dangerouslySetInnerHTML={{
