@@ -8,7 +8,4 @@ module.exports = withPlugins([[withImages]], {
     config.resolve.modules.push(path.resolve("./"));
     return config;
   },
-  future: {
-    webpack5: true,
-  },
 });
