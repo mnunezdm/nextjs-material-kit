@@ -52,5 +52,9 @@
     "react-slick": "0.28.1",
     "styled-components": "5.3.0",
     "webpack": "5.40.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-next": "^11.0.1"
   }
 }
