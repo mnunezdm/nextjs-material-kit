@@ -43,10 +43,10 @@ export default function WorksPage(props) {
       </Head>
       <Header
         color="transparent"
-        brand="samrofer"
+        brand="Reformas samrofer"
         fixed
         changeColorOnScroll={{
-          height: 300,
+          height: 200,
           color: "white",
         }}
         rightLinks={<HeaderLinks />}

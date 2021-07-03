@@ -34,7 +34,7 @@ export default function BudgetPage(props) {
       </Head>
       <Header
         color="transparent"
-        brand="samrofer"
+        brand="Reformas samrofer"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
