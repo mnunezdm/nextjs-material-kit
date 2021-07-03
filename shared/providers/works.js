@@ -2,10 +2,90 @@ export default class WorkProvider {
   static getWorks() {
     return [
       {
+        id: "0",
+        title: "Reforma de restaurante",
+        description:
+          "Reforma integral de restaurante en Alonso Martinez.",
+        year: 2020,
+        images: [
+          {
+            original: "https://i.ibb.co/s9WtwgV/rest-post-01.jpg",
+            medium: "https://i.ibb.co/s9WtwgV/rest-post-01.jpg",
+            thumbnail: "https://i.ibb.co/RTj70gD/rest-post-01.jpg",
+            originalAlt: "Entrada",
+            thumbnailAlt: "Entrada",
+          },
+          {
+            original: "https://i.ibb.co/xSbs5GB/rest-post-02.jpg",
+            medium: "https://i.ibb.co/xSbs5GB/rest-post-02.jpg",
+            thumbnail: "https://i.ibb.co/HDy2gYb/rest-post-02.jpg",
+            originalAlt: "Barra",
+            thumbnailAlt: "Barra",
+          },
+          {
+            original: "https://i.ibb.co/Y8XFqYd/rest-post-03.jpg",
+            medium: "https://i.ibb.co/Y8XFqYd/rest-post-03.jpg",
+            thumbnail: "https://i.ibb.co/bLFM8qv/rest-post-03.jpg",
+            originalAlt: "Restaurante 1",
+            thumbnailAlt: "Restaurante 1",
+          },
+          {
+            original: "https://i.ibb.co/gwkBRz1/rest-post-04.jpg",
+            medium: "https://i.ibb.co/gwkBRz1/rest-post-04.jpg",
+            thumbnail: "https://i.ibb.co/wC5xzMH/rest-post-04.jpg",
+            originalAlt: "Vinilo",
+            thumbnailAlt: "Vinilo",
+          },
+          {
+            original: "https://i.ibb.co/hLhkrJx/rest-post-05.jpg",
+            medium: "https://i.ibb.co/hLhkrJx/rest-post-05.jpg",
+            thumbnail: "https://i.ibb.co/xXPywtK/rest-post-05.jpg",
+            originalAlt: "Baño 1",
+            thumbnailAlt: "Baño 1",
+          },
+          {
+            original: "https://i.ibb.co/68XxZ8D/rest-post-06.jpg",
+            medium: "https://i.ibb.co/68XxZ8D/rest-post-06.jpg",
+            thumbnail: "https://i.ibb.co/KDKkGDV/rest-post-06.jpg",
+            originalAlt: "Restaurante 2",
+            thumbnailAlt: "Restaurante 2",
+          },
+          {
+            original: "https://i.ibb.co/xFTcLCZ/rest-post-07.jpg",
+            medium: "https://i.ibb.co/xFTcLCZ/rest-post-07.jpg",
+            thumbnail: "https://i.ibb.co/2Z4LhnJ/rest-post-07.jpg",
+            originalAlt: "Baño 2",
+            thumbnailAlt: "Baño 2",
+          },
+          {
+            original: "https://i.ibb.co/jTtzhrb/rest-post-08.jpg",
+            medium: "https://i.ibb.co/jTtzhrb/rest-post-08.jpg",
+            thumbnail: "https://i.ibb.co/Qf0k9Kp/rest-post-08.jpg",
+            originalAlt: "Barra 2",
+            thumbnailAlt: "Barra 2",
+          },
+          {
+            original: "https://i.ibb.co/44Nh8mP/rest-post-09.jpg",
+            medium: "https://i.ibb.co/44Nh8mP/rest-post-09.jpg",
+            thumbnail: "https://i.ibb.co/c2T46gD/rest-post-09.jpg",
+            originalAlt: "Restaurante 3",
+            thumbnailAlt: "Restaurante 3",
+          },
+          {
+            original: "https://i.ibb.co/2KDsmyf/rest-post-10.jpg",
+            medium: "https://i.ibb.co/2KDsmyf/rest-post-10.jpg",
+            thumbnail: "https://i.ibb.co/zfy7jr0/rest-post-10.jpg",
+            originalAlt: "Restaurante 4",
+            thumbnailAlt: "Restaurante 4",
+          },
+        ],
+      },
+      {
         id: "1",
         title: "Reforma de estancia en chalet unifamiliar",
         description:
-          "Reforma de estancia en chalet, barra americana, cambio de puerta corredera por puertas.",
+          "Reforma de estancia en chalet, barra americana, cambio de puerta corredera por puertas. Decoracion por @camomila.atelier",
+        year: 2016,
         images: [
           {
             original: "https://i.ibb.co/0qHQ3XN/nun1-post-01.jpg",
@@ -41,7 +121,8 @@ export default class WorkProvider {
         id: "2",
         title: "Reforma integral de vivienda en altura",
         description:
-          "Reducción del número de habitaciones de 3 habitaciones a 2 habitaciones, dormitorio principal más habitación de invitados. Cocina americana con barra, ampliación de ventanas, eliminación del gotelé. Diseño por Camomila®",
+          "Reducción del número de habitaciones de 3 habitaciones a 2 habitaciones, dormitorio principal más habitación de invitados. Cocina americana con barra, ampliación de ventanas, eliminación del gotelé. Decoración por @camomila.atelier",
+        year: 2017,
         images: [
           {
             original: "https://i.ibb.co/YZKZy3H/nun2-post-01.jpg",
@@ -99,6 +180,7 @@ export default class WorkProvider {
         title: "Reforma integral de sastreria",
         description:
           "Cambio de suelo, paredes, escaparates, baños, probadores...",
+        year: 2019,
         images: [
           {
             original: "https://i.ibb.co/Ldh88qr/hl-wh-01.jpg",
@@ -162,7 +244,8 @@ export default class WorkProvider {
         id: "4",
         title: "Reforma integral de vivienda en altura",
         description:
-          "Reforma integral de vivienda en altura en madrid centro. Cambio de suelos, reforma de baño, reforma de cocina",
+          "Reforma integral de vivienda en altura en Madrid centro. Cambio de suelos, reforma de baño, reforma de cocina",
+        year: 2018,
         images: [
           {
             original: "https://i.ibb.co/gdQmnTX/pe-post-01.jpg",
@@ -205,6 +288,84 @@ export default class WorkProvider {
             thumbnail: "https://i.ibb.co/wyJkBSz/pe-post-06.jpg",
             originalAlt: "Baño principal",
             thumbnailAlt: "Baño principal",
+          },
+        ],
+      },
+      {
+        id: "5",
+        title: "Reforma integral de tienda",
+        description: "",
+        year: 2000,
+        images: [
+          {
+            original: "https://i.ibb.co/xGVq6Rt/hann0-post-01.jpg",
+            medium: "https://i.ibb.co/xGVq6Rt/hann0-post-01.jpg",
+            thumbnail: "https://i.ibb.co/rMn2H1R/hann0-post-01.jpg",
+            originalAlt: "Entrada",
+            thumbnailAlt: "Entrada",
+          },
+          {
+            original: "https://i.ibb.co/g6dBVjC/hann0-post-02.jpg",
+            medium: "https://i.ibb.co/g6dBVjC/hann0-post-02.jpg",
+            thumbnail: "https://i.ibb.co/yVpbSfJ/hann0-post-02.jpg",
+            originalAlt: "Vestidor 1",
+            thumbnailAlt: "Vestidor 1",
+          },
+          {
+            original: "https://i.ibb.co/fHLd9Jk/hann0-post-03.jpg",
+            medium: "https://i.ibb.co/fHLd9Jk/hann0-post-03.jpg",
+            thumbnail: "https://i.ibb.co/QMtvk0P/hann0-post-03.jpg",
+            originalAlt: "Vestidor 2",
+            thumbnailAlt: "Vestidor 2",
+          },
+          {
+            original: "https://i.ibb.co/B4gnzpN/hann0-post-04.jpg",
+            medium: "https://i.ibb.co/B4gnzpN/hann0-post-04.jpg",
+            thumbnail: "https://i.ibb.co/VHvwj1m/hann0-post-04.jpg",
+            originalAlt: "Vestidor 3",
+            thumbnailAlt: "Vestidor 3",
+          },
+          {
+            original: "https://i.ibb.co/18dDvBv/hann0-post-05.jpg",
+            medium: "https://i.ibb.co/18dDvBv/hann0-post-05.jpg",
+            thumbnail: "https://i.ibb.co/HnxWFRF/hann0-post-05.jpg",
+            originalAlt: "Escaparate 1",
+            thumbnailAlt: "Escaparate 1",
+          },
+          {
+            original: "https://i.ibb.co/1RQFHVx/hann0-post-06.jpg",
+            medium: "https://i.ibb.co/1RQFHVx/hann0-post-06.jpg",
+            thumbnail: "https://i.ibb.co/dkM8n9y/hann0-post-06.jpg",
+            originalAlt: "Mesa",
+            thumbnailAlt: "Mesa",
+          },
+          {
+            original: "https://i.ibb.co/RSg1BQ4/hann0-post-07.jpg",
+            medium: "https://i.ibb.co/RSg1BQ4/hann0-post-07.jpg",
+            thumbnail: "https://i.ibb.co/qnDzWmF/hann0-post-07.jpg",
+            originalAlt: "Vestidor 4",
+            thumbnailAlt: "Vestidor 4",
+          },
+          {
+            original: "https://i.ibb.co/yQTP58b/hann0-post-08.jpg",
+            medium: "https://i.ibb.co/yQTP58b/hann0-post-08.jpg",
+            thumbnail: "https://i.ibb.co/W295FcY/hann0-post-08.jpg",
+            originalAlt: "Escaparate 2",
+            thumbnailAlt: "Escaparate 2",
+          },
+          {
+            original: "https://i.ibb.co/QjS7jXH/hann0-post-09.jpg",
+            medium: "https://i.ibb.co/QjS7jXH/hann0-post-09.jpg",
+            thumbnail: "https://i.ibb.co/FqZkqnY/hann0-post-09.jpg",
+            originalAlt: "Vestidor 5",
+            thumbnailAlt: "Vestidor 5",
+          },
+          {
+            original: "https://i.ibb.co/vPHBwZS/hann0-post-10.jpg",
+            medium: "https://i.ibb.co/vPHBwZS/hann0-post-10.jpg",
+            thumbnail: "https://i.ibb.co/J7KdB59/hann0-post-10.jpg",
+            originalAlt: "Vestidor 6",
+            thumbnailAlt: "Vestidor 6",
           },
         ],
       },
