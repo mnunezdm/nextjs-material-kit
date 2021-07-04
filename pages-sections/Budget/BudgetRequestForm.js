@@ -24,14 +24,14 @@ import { generateEmail } from "../../shared/libs/budgetRequest.js";
 
 const useStyles = makeStyles(styles);
 
-export default function BudgetRequestForm() {
+export default function BudgetRequestForm(props) {
   const classes = useStyles();
   const [state, setState] = useState({});
 
   const onSubmit = (event) => {
     event.preventDefault();
 
-    open(`mailto:eduardo.nunez@samrofer.com?${generateEmail(state)}`);
+    open(`mailto:${props.mail}?${generateEmail(state)}`);
   };
 
   const handleChange = (event) => {

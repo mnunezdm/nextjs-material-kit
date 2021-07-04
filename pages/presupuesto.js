@@ -22,6 +22,16 @@ import BudgetRequestForm from "../pages-sections/Budget/BudgetRequestForm.js";
 
 const useStyles = makeStyles(styles);
 
+export function getStaticProps() {
+  return {
+    props: {
+      igSamrofer: process.env.IG_SAMROFER,
+      mailSamrofer: process.env.MAIL_SAMROFER,
+      telSamrofer: process.env.TEL_SAMROFER,
+    },
+  };
+}
+
 export default function BudgetPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
@@ -35,7 +45,12 @@ export default function BudgetPage(props) {
       <Header
         color="transparent"
         brand="Reformas samrofer"
-        rightLinks={<HeaderLinks />}
+        rightLinks={
+          <HeaderLinks
+            igSamrofer={props.igSamrofer}
+            telSamrofer={props.telSamrofer}
+          />
+        }
         fixed
         changeColorOnScroll={{
           height: 200,
@@ -57,11 +72,11 @@ export default function BudgetPage(props) {
             </h2>
           </CardHeader>
           <CardBody className={classes.paddingTopNone}>
-            <BudgetRequestForm />
+            <BudgetRequestForm mail={props.mailSamrofer} />
           </CardBody>
         </Card>
       </article>
-      <Footer />
+      <Footer mail={props.mailSamrofer} />
     </>
   );
 }

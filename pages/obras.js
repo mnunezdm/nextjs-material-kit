@@ -25,6 +25,16 @@ const useStyles = makeStyles(styles);
 
 import ImageGallery from "react-image-gallery";
 
+export function getStaticProps() {
+  return {
+    props: {
+      igSamrofer: process.env.IG_SAMROFER,
+      mailSamrofer: process.env.MAIL_SAMROFER,
+      telSamrofer: process.env.TEL_SAMROFER,
+    },
+  };
+}
+
 export default function WorksPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
@@ -49,7 +59,12 @@ export default function WorksPage(props) {
           height: 200,
           color: "white",
         }}
-        rightLinks={<HeaderLinks />}
+        rightLinks={
+          <HeaderLinks
+            igSamrofer={props.igSamrofer}
+            telSamrofer={props.telSamrofer}
+          />
+        }
         {...rest}
       />
       <Parallax
@@ -85,7 +100,7 @@ export default function WorksPage(props) {
           </Card>
         ))}
       </section>
-      <Footer />
+      <Footer mail={props.mailSamrofer} />
     </div>
   );
 }

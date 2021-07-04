@@ -23,6 +23,16 @@ const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
 
+export function getStaticProps() {
+  return {
+    props: {
+      igSamrofer: process.env.IG_SAMROFER,
+      mailSamrofer: process.env.MAIL_SAMROFER,
+      telSamrofer: process.env.TEL_SAMROFER,
+    },
+  };
+}
+
 export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
@@ -32,7 +42,12 @@ export default function LandingPage(props) {
         color="transparent"
         routes={dashboardRoutes}
         brand="Reformas samrofer"
-        rightLinks={<HeaderLinks />}
+        rightLinks={
+          <HeaderLinks
+            igSamrofer={props.igSamrofer}
+            telSamrofer={props.telSamrofer}
+          />
+        }
         fixed
         changeColorOnScroll={{
           height: 400,
@@ -58,7 +73,7 @@ export default function LandingPage(props) {
           <ProductSection />
         </div>
       </div>
-      <Footer />
+      <Footer mail={props.mailSamrofer} />
     </>
   );
 }
