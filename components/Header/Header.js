@@ -66,7 +66,7 @@ export default function Header(props) {
   });
   const brandComponent = (
     <Link href="/" as="/" passHref>
-      <Button color="transparent" style={{ textTransform: "inherit" }}>
+      <Button color="transparent" style={{ textTransform: "inherit", paddingInline: 0 }}>
         <h1>{brand}</h1>
       </Button>
     </Link>
@@ -87,8 +87,17 @@ export default function Header(props) {
         <Hidden smDown implementation="css">
           {rightLinks}
         </Hidden>
-        <Hidden mdUp>
+        <Hidden xsDown mdUp>
           <InstagramLink styles={{ width: "unset" }} />
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerToggle}
+          >
+            <Menu />
+          </IconButton>
+        </Hidden>
+        <Hidden smUp>
           <IconButton
             color="inherit"
             aria-label="open drawer"
